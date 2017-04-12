@@ -31,6 +31,9 @@ namespace Dompress
         {
             if (ofdOpen.ShowDialog() == DialogResult.OK)
             {
+                tvFile.Nodes.Clear();
+                var rootNode = new DomNode(true);
+                tvFile.Nodes.Add(rootNode);
                 extractor = new SevenZipExtractor(ofdOpen.FileName);
                 foreach (var item in extractor.ArchiveFileData)
                 {
@@ -112,7 +115,7 @@ namespace Dompress
                 return;
             }
             var path = fbdExtPath.SelectedPath;
-            if (tvFile.SelectedNode == null)
+            if (tvFile.SelectedNode == null || (tvFile.SelectedNode as DomNode).IsRoot)
             {
                 extractor.ExtractArchive(path);
                 return;
@@ -157,6 +160,14 @@ namespace Dompress
         private void tsmiClear_Click(object sender, EventArgs e)
         {
             tvFile.SelectedNode = null;
+        }
+
+        private void btnCom_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmCompress())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

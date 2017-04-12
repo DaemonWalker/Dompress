@@ -15,8 +15,15 @@ namespace Dompress
             base.Text = text;
             this.FileName = fileName;
             this.IsDirectory = isDirectory;
+            this.IsRoot = false;
+        }
+        public DomNode(bool isRoot)
+        {
+            base.Text = "...";
+            this.IsRoot = isRoot;
         }
         public string FileName { get; set; }
         public bool IsDirectory { get; set; }
+        public bool IsRoot { get; set; }
     }
 }
