@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnOpen = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.chkShowPwd = new System.Windows.Forms.CheckBox();
             this.btnCompress = new System.Windows.Forms.Button();
             this.tbPwd = new System.Windows.Forms.TextBox();
             this.tbSave = new System.Windows.Forms.TextBox();
-            this.tbSelected = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbLevel = new System.Windows.Forms.ComboBox();
             this.cbMethod = new System.Windows.Forms.ComboBox();
@@ -45,31 +42,29 @@
             this.ofdSelected = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tvBrowser = new System.Windows.Forms.TreeView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F);
-            this.label1.Location = new System.Drawing.Point(52, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 33);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "压缩的文件/文件夹";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 12F);
-            this.label2.Location = new System.Drawing.Point(68, 144);
+            this.label2.Location = new System.Drawing.Point(14, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 33);
+            this.label2.Size = new System.Drawing.Size(136, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "压缩文件存放路径";
             // 
@@ -77,29 +72,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 12F);
-            this.label3.Location = new System.Drawing.Point(28, 24);
+            this.label3.Location = new System.Drawing.Point(14, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 33);
+            this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "压缩密码";
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnOpen.Location = new System.Drawing.Point(1020, 52);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(176, 44);
-            this.btnOpen.TabIndex = 6;
-            this.btnOpen.Text = "打开";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSave.Location = new System.Drawing.Point(1020, 141);
+            this.btnSave.Location = new System.Drawing.Point(490, 7);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(176, 44);
+            this.btnSave.Size = new System.Drawing.Size(88, 22);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "选择";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -108,9 +94,10 @@
             // 
             this.chkShowPwd.AutoSize = true;
             this.chkShowPwd.Font = new System.Drawing.Font("宋体", 12F);
-            this.chkShowPwd.Location = new System.Drawing.Point(853, 24);
+            this.chkShowPwd.Location = new System.Drawing.Point(426, 12);
+            this.chkShowPwd.Margin = new System.Windows.Forms.Padding(2);
             this.chkShowPwd.Name = "chkShowPwd";
-            this.chkShowPwd.Size = new System.Drawing.Size(175, 37);
+            this.chkShowPwd.Size = new System.Drawing.Size(91, 20);
             this.chkShowPwd.TabIndex = 8;
             this.chkShowPwd.Text = "显示密码";
             this.chkShowPwd.UseVisualStyleBackColor = true;
@@ -118,9 +105,10 @@
             // 
             // btnCompress
             // 
-            this.btnCompress.Location = new System.Drawing.Point(353, 31);
+            this.btnCompress.Location = new System.Drawing.Point(176, 16);
+            this.btnCompress.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompress.Name = "btnCompress";
-            this.btnCompress.Size = new System.Drawing.Size(172, 92);
+            this.btnCompress.Size = new System.Drawing.Size(86, 46);
             this.btnCompress.TabIndex = 9;
             this.btnCompress.Text = "开始";
             this.btnCompress.UseVisualStyleBackColor = true;
@@ -129,35 +117,30 @@
             // tbPwd
             // 
             this.tbPwd.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbPwd.Location = new System.Drawing.Point(177, 22);
+            this.tbPwd.Location = new System.Drawing.Point(88, 11);
+            this.tbPwd.Margin = new System.Windows.Forms.Padding(2);
             this.tbPwd.Name = "tbPwd";
             this.tbPwd.PasswordChar = '*';
-            this.tbPwd.Size = new System.Drawing.Size(670, 44);
+            this.tbPwd.Size = new System.Drawing.Size(337, 26);
             this.tbPwd.TabIndex = 10;
             // 
             // tbSave
             // 
             this.tbSave.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbSave.Location = new System.Drawing.Point(345, 141);
+            this.tbSave.Location = new System.Drawing.Point(152, 5);
+            this.tbSave.Margin = new System.Windows.Forms.Padding(2);
             this.tbSave.Name = "tbSave";
-            this.tbSave.Size = new System.Drawing.Size(670, 44);
+            this.tbSave.Size = new System.Drawing.Size(337, 26);
             this.tbSave.TabIndex = 11;
-            // 
-            // tbSelected
-            // 
-            this.tbSelected.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbSelected.Location = new System.Drawing.Point(345, 52);
-            this.tbSelected.Name = "tbSelected";
-            this.tbSelected.Size = new System.Drawing.Size(670, 44);
-            this.tbSelected.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("宋体", 12F);
-            this.label4.Location = new System.Drawing.Point(28, 116);
+            this.label4.Location = new System.Drawing.Point(14, 58);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 33);
+            this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 13;
             this.label4.Text = "压缩质量";
             // 
@@ -172,9 +155,10 @@
             "普通",
             "高",
             "最高"});
-            this.cbLevel.Location = new System.Drawing.Point(178, 112);
+            this.cbLevel.Location = new System.Drawing.Point(89, 56);
+            this.cbLevel.Margin = new System.Windows.Forms.Padding(2);
             this.cbLevel.Name = "cbLevel";
-            this.cbLevel.Size = new System.Drawing.Size(332, 41);
+            this.cbLevel.Size = new System.Drawing.Size(168, 24);
             this.cbLevel.TabIndex = 14;
             // 
             // cbMethod
@@ -190,18 +174,20 @@
             "Lzma2",
             "Ppmd",
             "Default"});
-            this.cbMethod.Location = new System.Drawing.Point(695, 112);
+            this.cbMethod.Location = new System.Drawing.Point(348, 56);
+            this.cbMethod.Margin = new System.Windows.Forms.Padding(2);
             this.cbMethod.Name = "cbMethod";
-            this.cbMethod.Size = new System.Drawing.Size(332, 41);
+            this.cbMethod.Size = new System.Drawing.Size(168, 24);
             this.cbMethod.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 12F);
-            this.label5.Location = new System.Drawing.Point(546, 115);
+            this.label5.Location = new System.Drawing.Point(273, 58);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 33);
+            this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "压缩算法";
             // 
@@ -216,26 +202,56 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("宋体", 12F);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1240, 747);
+            this.tabControl1.Size = new System.Drawing.Size(620, 304);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.tbSelected);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.tbSave);
-            this.tabPage1.Controls.Add(this.btnOpen);
-            this.tabPage1.Controls.Add(this.btnSave);
-            this.tabPage1.Location = new System.Drawing.Point(8, 47);
+            this.tabPage1.Controls.Add(this.splitContainer1);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1224, 692);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(612, 274);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "基本";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(2, 37);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tvBrowser);
+            this.splitContainer1.Size = new System.Drawing.Size(608, 235);
+            this.splitContainer1.SplitterDistance = 202;
+            this.splitContainer1.TabIndex = 15;
+            // 
+            // tvBrowser
+            // 
+            this.tvBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvBrowser.Location = new System.Drawing.Point(0, 0);
+            this.tvBrowser.Name = "tvBrowser";
+            this.tvBrowser.Size = new System.Drawing.Size(202, 235);
+            this.tvBrowser.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnSave);
+            this.panel2.Controls.Add(this.tbSave);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(2, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(608, 35);
+            this.panel2.TabIndex = 14;
             // 
             // tabPage2
             // 
@@ -247,10 +263,11 @@
             this.tabPage2.Controls.Add(this.cbLevel);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Font = new System.Drawing.Font("宋体", 12F);
-            this.tabPage2.Location = new System.Drawing.Point(8, 47);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1224, 692);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(612, 235);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "高级";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -259,25 +276,31 @@
             // 
             this.panel1.Controls.Add(this.btnCompress);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 591);
+            this.panel1.Location = new System.Drawing.Point(0, 304);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1240, 156);
+            this.panel1.Size = new System.Drawing.Size(620, 70);
             this.panel1.TabIndex = 18;
             // 
             // FrmCompress
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 747);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(620, 374);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCompress";
             this.Text = "FrmCompress";
             this.Load += new System.EventHandler(this.FrmCompress_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -286,16 +309,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.CheckBox chkShowPwd;
         private System.Windows.Forms.Button btnCompress;
         private System.Windows.Forms.TextBox tbPwd;
         private System.Windows.Forms.TextBox tbSave;
-        private System.Windows.Forms.TextBox tbSelected;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbLevel;
         private System.Windows.Forms.ComboBox cbMethod;
@@ -305,5 +325,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TreeView tvBrowser;
+        private System.Windows.Forms.Panel panel2;
     }
 }
