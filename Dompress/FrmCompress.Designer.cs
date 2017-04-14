@@ -44,10 +44,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tvBrowser = new System.Windows.Forms.TreeView();
+            this.lvDirInfo = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lvDirInfo = new System.Windows.Forms.ListView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -63,10 +63,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 12F);
-            this.label2.Location = new System.Drawing.Point(28, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(14, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(271, 33);
+            this.label2.Size = new System.Drawing.Size(136, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "压缩文件存放路径";
             // 
@@ -74,20 +74,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 12F);
-            this.label3.Location = new System.Drawing.Point(28, 24);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(14, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 33);
+            this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "压缩密码";
             // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSave.Location = new System.Drawing.Point(980, 14);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(490, 7);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(176, 44);
+            this.btnSave.Size = new System.Drawing.Size(88, 22);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "选择";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -96,10 +96,10 @@
             // 
             this.chkShowPwd.AutoSize = true;
             this.chkShowPwd.Font = new System.Drawing.Font("宋体", 12F);
-            this.chkShowPwd.Location = new System.Drawing.Point(852, 24);
-            this.chkShowPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkShowPwd.Location = new System.Drawing.Point(426, 12);
+            this.chkShowPwd.Margin = new System.Windows.Forms.Padding(2);
             this.chkShowPwd.Name = "chkShowPwd";
-            this.chkShowPwd.Size = new System.Drawing.Size(175, 37);
+            this.chkShowPwd.Size = new System.Drawing.Size(91, 20);
             this.chkShowPwd.TabIndex = 8;
             this.chkShowPwd.Text = "显示密码";
             this.chkShowPwd.UseVisualStyleBackColor = true;
@@ -107,10 +107,10 @@
             // 
             // btnCompress
             // 
-            this.btnCompress.Location = new System.Drawing.Point(352, 32);
-            this.btnCompress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompress.Location = new System.Drawing.Point(176, 16);
+            this.btnCompress.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompress.Name = "btnCompress";
-            this.btnCompress.Size = new System.Drawing.Size(172, 92);
+            this.btnCompress.Size = new System.Drawing.Size(86, 46);
             this.btnCompress.TabIndex = 9;
             this.btnCompress.Text = "开始";
             this.btnCompress.UseVisualStyleBackColor = true;
@@ -119,30 +119,30 @@
             // tbPwd
             // 
             this.tbPwd.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbPwd.Location = new System.Drawing.Point(176, 22);
-            this.tbPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPwd.Location = new System.Drawing.Point(88, 11);
+            this.tbPwd.Margin = new System.Windows.Forms.Padding(2);
             this.tbPwd.Name = "tbPwd";
             this.tbPwd.PasswordChar = '*';
-            this.tbPwd.Size = new System.Drawing.Size(670, 44);
+            this.tbPwd.Size = new System.Drawing.Size(337, 26);
             this.tbPwd.TabIndex = 10;
             // 
             // tbSave
             // 
             this.tbSave.Font = new System.Drawing.Font("宋体", 12F);
-            this.tbSave.Location = new System.Drawing.Point(304, 10);
-            this.tbSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSave.Location = new System.Drawing.Point(152, 5);
+            this.tbSave.Margin = new System.Windows.Forms.Padding(2);
             this.tbSave.Name = "tbSave";
-            this.tbSave.Size = new System.Drawing.Size(670, 44);
+            this.tbSave.Size = new System.Drawing.Size(337, 26);
             this.tbSave.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("宋体", 12F);
-            this.label4.Location = new System.Drawing.Point(28, 116);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(14, 58);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 33);
+            this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 13;
             this.label4.Text = "压缩质量";
             // 
@@ -157,10 +157,10 @@
             "普通",
             "高",
             "最高"});
-            this.cbLevel.Location = new System.Drawing.Point(178, 112);
-            this.cbLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbLevel.Location = new System.Drawing.Point(89, 56);
+            this.cbLevel.Margin = new System.Windows.Forms.Padding(2);
             this.cbLevel.Name = "cbLevel";
-            this.cbLevel.Size = new System.Drawing.Size(332, 41);
+            this.cbLevel.Size = new System.Drawing.Size(168, 24);
             this.cbLevel.TabIndex = 14;
             // 
             // cbMethod
@@ -176,20 +176,20 @@
             "Lzma2",
             "Ppmd",
             "Default"});
-            this.cbMethod.Location = new System.Drawing.Point(696, 112);
-            this.cbMethod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMethod.Location = new System.Drawing.Point(348, 56);
+            this.cbMethod.Margin = new System.Windows.Forms.Padding(2);
             this.cbMethod.Name = "cbMethod";
-            this.cbMethod.Size = new System.Drawing.Size(332, 41);
+            this.cbMethod.Size = new System.Drawing.Size(168, 24);
             this.cbMethod.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 12F);
-            this.label5.Location = new System.Drawing.Point(546, 116);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(273, 58);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 33);
+            this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "压缩算法";
             // 
@@ -204,21 +204,21 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("宋体", 12F);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1240, 608);
+            this.tabControl1.Size = new System.Drawing.Size(620, 304);
             this.tabControl1.TabIndex = 17;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.splitContainer1);
             this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(8, 47);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1224, 553);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(612, 274);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "基本";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -226,8 +226,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(4, 74);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.splitContainer1.Location = new System.Drawing.Point(2, 37);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -237,23 +236,32 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.lvDirInfo);
-            this.splitContainer1.Size = new System.Drawing.Size(1216, 475);
-            this.splitContainer1.SplitterDistance = 404;
-            this.splitContainer1.SplitterWidth = 8;
+            this.splitContainer1.Size = new System.Drawing.Size(608, 235);
+            this.splitContainer1.SplitterDistance = 151;
             this.splitContainer1.TabIndex = 15;
             // 
             // tvBrowser
             // 
             this.tvBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvBrowser.Location = new System.Drawing.Point(0, 0);
-            this.tvBrowser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tvBrowser.Name = "tvBrowser";
-            this.tvBrowser.Size = new System.Drawing.Size(404, 475);
+            this.tvBrowser.Size = new System.Drawing.Size(151, 235);
             this.tvBrowser.TabIndex = 12;
             this.tvBrowser.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.tvBrowser_BeforeExpand);
             this.tvBrowser.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvBrowser_AfterSelect);
             this.tvBrowser.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvBrowser_NodeMouseClick);
             this.tvBrowser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tvBrowser_MouseClick);
+            // 
+            // lvDirInfo
+            // 
+            this.lvDirInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvDirInfo.Location = new System.Drawing.Point(0, 0);
+            this.lvDirInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.lvDirInfo.Name = "lvDirInfo";
+            this.lvDirInfo.Size = new System.Drawing.Size(453, 235);
+            this.lvDirInfo.TabIndex = 0;
+            this.lvDirInfo.UseCompatibleStateImageBehavior = false;
+            this.lvDirInfo.View = System.Windows.Forms.View.List;
             // 
             // panel2
             // 
@@ -261,10 +269,9 @@
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.tbSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1216, 70);
+            this.panel2.Size = new System.Drawing.Size(608, 35);
             this.panel2.TabIndex = 14;
             // 
             // tabPage2
@@ -277,11 +284,11 @@
             this.tabPage2.Controls.Add(this.cbLevel);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Font = new System.Drawing.Font("宋体", 12F);
-            this.tabPage2.Location = new System.Drawing.Point(8, 47);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1224, 553);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(612, 274);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "高级";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -290,32 +297,23 @@
             // 
             this.panel1.Controls.Add(this.btnCompress);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 608);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 304);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1240, 140);
+            this.panel1.Size = new System.Drawing.Size(620, 70);
             this.panel1.TabIndex = 18;
-            // 
-            // lvDirInfo
-            // 
-            this.lvDirInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvDirInfo.Location = new System.Drawing.Point(0, 0);
-            this.lvDirInfo.Name = "lvDirInfo";
-            this.lvDirInfo.Size = new System.Drawing.Size(804, 475);
-            this.lvDirInfo.TabIndex = 0;
-            this.lvDirInfo.UseCompatibleStateImageBehavior = false;
-            this.lvDirInfo.View = System.Windows.Forms.View.List;
             // 
             // FrmCompress
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 748);
+            this.ClientSize = new System.Drawing.Size(620, 374);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCompress";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmCompress";
             this.Load += new System.EventHandler(this.FrmCompress_Load);
             this.tabControl1.ResumeLayout(false);

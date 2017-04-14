@@ -21,20 +21,20 @@ namespace Dompress
 
         private void btnCompress_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(string.Empty))//tbSelected.Text))
-            {
-                MessageBox.Show("请选择一个文件或文件夹去压缩！");
-            }
-            var comPath = "";// tbSelected.Text;
             var filePath = tbSave.Text;
             var pwd = tbPwd.Text;
             var compressor = new SevenZipCompressor()
             {
                 CompressionMethod = (CompressionMethod)cbMethod.SelectedIndex,
-                CompressionLevel = (CompressionLevel)cbLevel.SelectedIndex
+                CompressionLevel = (CompressionLevel)cbLevel.SelectedIndex,
+                ArchiveFormat = OutArchiveFormat.SevenZip
             };
-            if (Directory.Exists(comPath))
+
+            return;
+
+            if (lvDirInfo.SelectedItems.Count == 0)
             {
+                var comPath = (tvBrowser.SelectedNode as BrowserNode).Path;
                 if (string.IsNullOrEmpty(pwd))
                 {
                     compressor.CompressDirectory(comPath, filePath, true);
@@ -44,18 +44,31 @@ namespace Dompress
                     compressor.CompressDirectory(comPath, filePath, true, pwd);
                 }
             }
-            if (File.Exists(comPath))
+            else
             {
+                var fileList = new List<string>();
+                foreach (ListViewItem item in lvDirInfo.SelectedItems)
+                {
+                    if (item.ForeColor == Color.Blue)
+                    {
+                        MessageBox.Show("暂不支持文件夹、文件同时压缩，请将他们放到一个文件夹内", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        fileList.Add(item.Tag.ToString());
+                    }
+                }
                 if (string.IsNullOrEmpty(pwd))
                 {
-                    compressor.CompressFiles(filePath, comPath);
+                    compressor.CompressFiles(filePath, fileList.ToArray());
                 }
                 else
                 {
-                    compressor.CompressFilesEncrypted(filePath, pwd, comPath);
+                    compressor.CompressFilesEncrypted(filePath, pwd, fileList.ToArray());
                 }
             }
-            MessageBox.Show("ok!");
+            MessageBox.Show("压缩成功");
         }
 
         private void chkShowPwd_CheckedChanged(object sender, EventArgs e)
@@ -166,7 +179,8 @@ namespace Dompress
                 lvDirInfo.Items.Add(new ListViewItem()
                 {
                     Text = child.Name,
-                    Tag = child.FullName
+                    Tag = child.FullName,
+                    ForeColor = Color.Blue
                 });
             }
 

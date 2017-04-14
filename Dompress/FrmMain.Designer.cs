@@ -36,9 +36,9 @@
             this.fbdExtPath = new System.Windows.Forms.FolderBrowserDialog();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCom = new System.Windows.Forms.Button();
             this.btnExt = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
-            this.btnCom = new System.Windows.Forms.Button();
             this.fbdComPath = new System.Windows.Forms.FolderBrowserDialog();
             this.sfdComName = new System.Windows.Forms.SaveFileDialog();
             this.menuFile.SuspendLayout();
@@ -57,10 +57,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tvFile.ContextMenuStrip = this.menuFile;
             this.tvFile.Font = new System.Drawing.Font("宋体", 12F);
-            this.tvFile.Location = new System.Drawing.Point(15, 19);
-            this.tvFile.Margin = new System.Windows.Forms.Padding(6);
+            this.tvFile.Location = new System.Drawing.Point(8, 10);
             this.tvFile.Name = "tvFile";
-            this.tvFile.Size = new System.Drawing.Size(1687, 758);
+            this.tvFile.Size = new System.Drawing.Size(846, 381);
             this.tvFile.TabIndex = 2;
             // 
             // menuFile
@@ -69,12 +68,12 @@
             this.menuFile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiClear});
             this.menuFile.Name = "menuFile";
-            this.menuFile.Size = new System.Drawing.Size(185, 40);
+            this.menuFile.Size = new System.Drawing.Size(125, 26);
             // 
             // tsmiClear
             // 
             this.tsmiClear.Name = "tsmiClear";
-            this.tsmiClear.Size = new System.Drawing.Size(184, 36);
+            this.tsmiClear.Size = new System.Drawing.Size(124, 22);
             this.tsmiClear.Text = "清除选择";
             this.tsmiClear.Click += new System.EventHandler(this.tsmiClear_Click);
             // 
@@ -82,9 +81,10 @@
             // 
             this.panel2.Controls.Add(this.tvFile);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 141);
+            this.panel2.Location = new System.Drawing.Point(0, 70);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1717, 792);
+            this.panel2.Size = new System.Drawing.Size(858, 396);
             this.panel2.TabIndex = 5;
             // 
             // panel1
@@ -94,15 +94,28 @@
             this.panel1.Controls.Add(this.btnOpen);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1717, 141);
+            this.panel1.Size = new System.Drawing.Size(858, 70);
             this.panel1.TabIndex = 6;
+            // 
+            // btnCom
+            // 
+            this.btnCom.Location = new System.Drawing.Point(207, 6);
+            this.btnCom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCom.Name = "btnCom";
+            this.btnCom.Size = new System.Drawing.Size(88, 57);
+            this.btnCom.TabIndex = 2;
+            this.btnCom.Text = "压缩";
+            this.btnCom.UseVisualStyleBackColor = true;
+            this.btnCom.Click += new System.EventHandler(this.btnCom_Click);
             // 
             // btnExt
             // 
-            this.btnExt.Location = new System.Drawing.Point(215, 12);
+            this.btnExt.Location = new System.Drawing.Point(108, 6);
+            this.btnExt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExt.Name = "btnExt";
-            this.btnExt.Size = new System.Drawing.Size(175, 114);
+            this.btnExt.Size = new System.Drawing.Size(88, 57);
             this.btnExt.TabIndex = 1;
             this.btnExt.Text = "解压";
             this.btnExt.UseVisualStyleBackColor = true;
@@ -110,33 +123,24 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(15, 12);
+            this.btnOpen.Location = new System.Drawing.Point(8, 6);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(175, 114);
+            this.btnOpen.Size = new System.Drawing.Size(88, 57);
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "打开";
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
-            // btnCom
-            // 
-            this.btnCom.Location = new System.Drawing.Point(414, 12);
-            this.btnCom.Name = "btnCom";
-            this.btnCom.Size = new System.Drawing.Size(175, 114);
-            this.btnCom.TabIndex = 2;
-            this.btnCom.Text = "压缩";
-            this.btnCom.UseVisualStyleBackColor = true;
-            this.btnCom.Click += new System.EventHandler(this.btnCom_Click);
-            // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1717, 933);
+            this.ClientSize = new System.Drawing.Size(858, 466);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuFile.ResumeLayout(false);

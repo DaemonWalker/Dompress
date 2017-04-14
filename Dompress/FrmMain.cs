@@ -23,7 +23,11 @@ namespace Dompress
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
+            var args = Environment.GetCommandLineArgs();
+            if (args.Length > 1 && string.IsNullOrWhiteSpace(args[1]) == false)
+            {
+                OpenFile(args[1]);
+            }
 
         }
 
@@ -31,24 +35,7 @@ namespace Dompress
         {
             if (ofdOpen.ShowDialog() == DialogResult.OK)
             {
-                tvFile.Nodes.Clear();
-                var rootNode = new DomNode(true);
-                tvFile.Nodes.Add(rootNode);
-                extractor = new SevenZipExtractor(ofdOpen.FileName);
-                foreach (var item in extractor.ArchiveFileData)
-                {
-                    if (item.FileName.Contains('\\') == false && item.IsDirectory)
-                    {
-                        var node = new DomNode(item.FileName, item.FileName, item.IsDirectory);
-                        tvFile.Nodes.Add(node);
-                        node.Tag = item.FileName;
-                    }
-                }
-                foreach (var item in extractor.ArchiveFileData)
-                {
-                    var path = item.FileName.Split('\\');
-                    CreateNode(path, 0, null);
-                }
+                OpenFile(ofdOpen.FileName);
 
 
             }
@@ -167,6 +154,28 @@ namespace Dompress
             using (var frm = new FrmCompress())
             {
                 frm.ShowDialog();
+            }
+        }
+
+        private void OpenFile(string zipPath)
+        {
+            tvFile.Nodes.Clear();
+            var rootNode = new DomNode(true);
+            tvFile.Nodes.Add(rootNode);
+            extractor = new SevenZipExtractor(zipPath);
+            foreach (var item in extractor.ArchiveFileData)
+            {
+                if (item.FileName.Contains('\\') == false && item.IsDirectory)
+                {
+                    var node = new DomNode(item.FileName, item.FileName, item.IsDirectory);
+                    tvFile.Nodes.Add(node);
+                    node.Tag = item.FileName;
+                }
+            }
+            foreach (var item in extractor.ArchiveFileData)
+            {
+                var path = item.FileName.Split('\\');
+                CreateNode(path, 0, null);
             }
         }
     }
